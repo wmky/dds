@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FullGradeCfg>
+	<DeptGrade fullgrade="20">市场拓展部</DeptGrade>
+	<DeptGrade fullgrade="20">全业务稽核中心</DeptGrade>
+	<DeptGrade fullgrade="20">政企客户部</DeptGrade>
+	<DeptGrade fullgrade="20">公众客户部</DeptGrade>
+	<DeptGrade fullgrade="20">渠道管理中心</DeptGrade>
+	<DeptGrade fullgrade="20">增值业务部</DeptGrade>
+	<DeptGrade fullgrade="20">客户服务部</DeptGrade>
+	<DeptGrade fullgrade="20">企业信息化部</DeptGrade>
+	<DeptGrade fullgrade="40">运行维护部</DeptGrade>
+	<DeptGrade fullgrade="40">网络建设部</DeptGrade>
+	<DeptGrade fullgrade="40">监控维护中心</DeptGrade>
+	<DeptGrade fullgrade="40">网优</DeptGrade>
+	<DeptGrade fullgrade="40">客户保障中心</DeptGrade>
+	<DeptGrade fullgrade="40">线路维护中心</DeptGrade>
+	<DeptGrade fullgrade="40">综合管理部</DeptGrade>
+	<DeptGrade fullgrade="40">计划财务部</DeptGrade>
+	<DeptGrade fullgrade="40">人力资源部</DeptGrade>
+	<DeptGrade fullgrade="40">工会</DeptGrade>
+	<DeptGrade fullgrade="40">计审计</DeptGrade>
+	<DeptGrade fullgrade="40">计划财务部</DeptGrade>
+	<DeptGrade fullgrade="20">鄂城</DeptGrade>
+	<DeptGrade fullgrade="20">华容</DeptGrade>
+	<DeptGrade fullgrade="20">梁子</DeptGrade>
+	<DeptGrade fullgrade="20">开发区</DeptGrade>
+
+
+</FullGradeCfg>
+

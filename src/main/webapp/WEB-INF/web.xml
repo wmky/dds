@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>bi-dds</display-name>
+
+	<welcome-file-list>
+		<welcome-file>/mainctrl/init.itm</welcome-file>
+	</welcome-file-list>
+	
+	<context-param>
+	   <param-name>log4jConfigLocation</param-name>
+	   <param-value>classpath:properties/log4j.properties</param-value>
+	</context-param>	
+    <listener>
+      <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+
+	<!-- Filter to handle logout requests sent directly by the CAS server 
+	<filter>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener
+		</listener-class>
+	</listener>
+-->
+	<!-- 上下文参数配置 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+		 <!--classpath*:com/bi/dds/spring/spring-datasource.xml,
+		 classpath*:com/bi/dds/spring/spring-contextmanager.xml,
+		 classpath*:com/bi/dds/spring/spring-mail.xml-->
+		classpath*:spring/*.xml
+		
+		</param-value>
+	</context-param>
+
+	<!-- 监听器的配置 -->
+	<listener>
+      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+   </listener>
+
+	<!-- 编码过滤 -->
+	<filter>
+		<filter-name>Encoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- spring mvc控制器controller -->
+	<servlet>
+		<servlet-name>ddsweb</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ddsweb</servlet-name>
+		<url-pattern>*.dds</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ddsweb</servlet-name>
+		<url-pattern>*.itm</url-pattern>
+	</servlet-mapping>
+
+	<!-- 系统启动自动加载所有已开启的Job应用   --> 
+<servlet>
+  	<servlet-name>RunJobInitServlet</servlet-name>
+    <servlet-class>com.bi.dds.system.SystemInitServlet</servlet-class>
+    <load-on-startup>5</load-on-startup>
+  </servlet>
+  	
+	<!-- 解决xss漏洞 -->
+	<filter>
+		<filter-name>xssFilter</filter-name>
+		<filter-class>com.bi.dds.filter.XSSFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>xssFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 解决xss漏洞 end -->
+    
+    
+    <!--  -->
+	<filter>
+		<filter-name>identityFilter</filter-name>
+		<filter-class>com.bi.dds.filter.IdentityFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>identityFilter</filter-name>
+		<url-pattern>*.itm</url-pattern>
+	</filter-mapping>
+	<!-- 后台用户登录  end -->
+	
+</web-app>

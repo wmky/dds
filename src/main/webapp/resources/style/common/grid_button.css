@@ -1,0 +1,30 @@
+		.add {
+            background-image:url(../../../resources/images/common/add.gif) !important;
+        }
+        .option {
+            background-image:url(../../../resources/images/common/option.gif) !important;
+        }
+        .remove {
+            background-image:url(../../../resources/images/common/remove.gif) !important;
+        }
+        .view{
+        	background-image:url(../../../resources/images/common/view.png) !important;
+        }
+        .config{
+        	background-image:url(../../../resources/images/common/config.png) !important;
+        }
+        .head{
+        	background-image:url(../../../resources/images/common/head.png) !important;
+        }
+        .query{
+        	background-image:url(../../../resources/images/common/query.png) !important;
+        }
+        .save{
+        	background-image:url(../../../resources/images/common/save.gif) !important;
+        }
+        .cancel{
+        	background-image:url(../../../resources/images/common/cancel.gif) !important;
+        }
+        .refresh{
+        	background-image:url(../../../resources/images/common/refresh.gif) !important;
+        }

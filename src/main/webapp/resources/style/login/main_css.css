@@ -1,0 +1,38 @@
+html, body {
+        font:normal 12px verdana;
+        margin:0;
+        padding:0;
+        border:0 none;
+        overflow:hidden;
+        height:100%;
+    }
+	.x-panel-body p {
+	    margin:10px;
+	}
+    .x-column-layout-ct .x-panel {
+        margin-bottom:5px;
+    }
+    .x-column-layout-ct .x-panel-dd-spacer {
+        margin-bottom:5px;
+    }
+    .menu_2 {
+        background-image:url(../../../resources/images/login/plan_info.gif) !important;
+    }
+    .menu_3 {
+        background-image:url(../../../resources/images/login/plan_config.png) !important;
+    }
+    .menu_4 {
+        background-image:url(../../../resources/images/login/application.png) !important;
+    }
+    .menu_5 {
+    	background-image:url(../../../resources/images/login/config.png) !important;
+    }
+    .menu_6 {
+    	background-image:url(../../../resources/images/login/topo.gif) !important;
+    }
+    .menu_7 {
+    	background-image:url(../../../resources/images/login/chart.gif) !important;
+    }
+    .menu_8 {
+    	background-image:url(../../../resources/images/login/logout.gif) !important;
+    }
